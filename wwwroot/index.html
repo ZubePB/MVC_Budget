@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html class="bg-dark bg-gradient text-light">
+<head>
+    <meta charset="UTF-8" />
+    <title>Buget - by Zube Pierre Basali</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body class="bg-dark bg-gradient text-light">
+    <nav class="navbar navbar-expand-lg bg-black bg-gradient text-light">
+        <div id="nav-section-div" class="container-fluid ms-5">
+            <a class="navbar-brand text-light" href="" onclick="getItems(sessionStorage.getItem('script'))">Budget</a>
+            <div class="navbar-brand text-light nav-item dropdown" id="nav-brand-dd">
+               <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav-dd-a">
+                    
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="setJsScript('personal')">Personal Finances</a></li>
+                    <li><a class="dropdown-item" onclick="setJsScript('business')">Business Finances</a></li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-ul">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" onclick="getBusinessItems('businessTransactions')">Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" onclick="getBusinessItems('businessCategories')">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" onclick="getBusinessItems('businessSuppliers')">Suppliers</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="nav-search-div">
+                <form id="nav-search-form" class="d-flex me-5 text-light" oninput="searchBusinessTransactions()">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="modal-div" class="modal">
+    </div>
+
+    <div class="ms-5" id="main-div">
+        <h1 id="section-h1"></h1>
+
+        <div class="d-flex justify-content-between pe-3" id="add-btn-div">
+            <div>
+                <button id="add-btn" class="btn btn-info add-btn me-2">Add</button>
+            </div>
+            <div>
+                <p id="btn-p" style="display: none; z-index: 2; transition: 1s;" class="triangle-right bg-dark"></p>
+            </div>
+            <div id="auto-add-div" style="display: none;" >
+                <button id="auto-add-btn" class="btn btn-primary add-btn me-2" style="display: none;">Add </button>
+                <button id="auto-stop-btn" class="btn btn-danger del-btn" style="display: none;">Stop </button>
+            </div>
+        </div>
+
+        <hr />
+
+        <div id="table-div" class="table-responsive">
+            <table id="item-table" class="table table-bordered table-dark table-striped-columns table-hover">
+                <thead id="item-table-head" class="table-secondary sticky-top">
+                </thead>
+                <tbody id="table-body" class="table-group-divider"></tbody>
+            </table>
+        </div>
+
+        <div id="page-nav" class="d-flex ms-3 mt-3 d-flex justify-content-start sticky-bottom">
+            <ul class="pagination" id="page-ul"></ul>
+        </div>
+    </div>
+
+    <script src="js/business_js_with_cache.js" asp-append-version="true"></script>
+    <script src="js/personal_js_with_cache.js" asp-append-version="true"></script>
+    <script>sessionStorage.setItem('lastUrl',"");</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        getItems(sessionStorage.getItem('script'));
+    </script>
+</body>
+</html>

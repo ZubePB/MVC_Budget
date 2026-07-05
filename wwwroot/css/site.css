@@ -1,0 +1,260 @@
+﻿html {
+    height: 100vh;
+}
+
+body {
+}
+
+#section-h1::first-letter {
+    text-transform: capitalize;
+}
+
+.navbar {
+    height: 8vh;
+}
+
+#nav-search-div {
+    width: 70%;
+    height: 100%;
+}
+
+    #nav-search-div.fadeIn{
+        animation-duration: 1s;
+        animation-name: fadeIn;
+    }
+
+    #nav-search-form {
+        height: 100%;
+        width: 100%;
+    }
+
+#search-transaction-name {
+    width: 20%;
+}
+
+#search-category-div {
+    width: 18%;
+}
+
+#search-category-select {
+    width: 100%;
+}
+
+#search-category-div {
+    width: 15%;
+}
+
+#search-supplier-div {
+    width: 15%;
+}
+
+#search-recurrent-div {
+    width: 7%;
+}
+
+#modal-div {
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    color: black;
+    z-index: 2;
+}
+
+#add-div {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    padding-top: 0rem;
+    left: 10vw;
+    top: 40vh;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), slategrey;
+    background-color: white;
+    height: 100px;
+    margin-top: 0;
+    width: 60%;
+    border-radius: 4px;
+    border: 2px solid slategrey;
+    justify-content: center;
+    align-items: start;
+}
+
+
+#edit-div {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0rem;
+    left: 10vw;
+    top: 40vh;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), slategrey;
+    background-color: white;
+    height: 100px;
+    margin-top: 0;
+    width: 60%;
+    border-radius: 4px;
+    border: 2px solid slategrey;
+    justify-content: center;
+    align-items: start;
+}
+
+#delete-div {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0rem;
+    left: 20vw;
+    top: 40vh;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), slategrey;
+    background-color: white;
+    height: 23%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    width: 30%;
+    border-radius: 4px;
+    border: 2px solid slategrey;
+    justify-content: center;
+    align-items: start;
+}
+
+#stop-auto-div {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    padding-top: 0rem;
+    left: 10vw;
+    top: 40vh;
+    overflow: hidden;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), slategrey;
+    background-color: white;
+    min-height: 100px;
+    margin-top: 0;
+    min-width: 60%;
+    border-radius: 4px;
+    border: 2px solid slategrey;
+    justify-content: center;
+    align-items: start;
+}
+
+#main-div{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+    #main-div.fadeOut {
+        animation-duration: .75s;
+        animation-name: fadeOut;
+    }
+
+    #main-div.fadeIn {
+        animation-duration: .75s;
+        animation-name: fadeIn;
+    }
+
+
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0%; }
+    100% { opacity: 1; }
+}
+
+#add-btn-div{
+    width: 70%;
+}
+
+#table-div {
+    height: 70vh;
+    width: 70%;
+    overflow: scroll;
+}
+
+#item-table {
+    width: 99%;
+}
+
+#item-table-div {
+    height: 90%;
+}
+
+button:hover {
+    filter: invert();
+}
+
+nav a::first-letter {
+    color: rgba(255,120,70);
+}
+
+nav a:hover::first-line {
+    color: rgba(255,120,70);
+}
+
+nav a:hover::first-letter {
+    color: rgba(120,255,70);
+}
+
+#page-ul li a:hover {
+    cursor: pointer;
+    filter: invert();
+}
+
+button {
+    background: linear-gradient( rgba(0,0,0,0.25), rgba(0,0,0,0.5)), slategrey;
+}
+
+.edit-btn {
+    content: url('../img/edit.svg');
+    width: 48px;
+}
+
+.del-btn {
+    content: url('../img/del_sm.svg');
+    width: 48px;
+}
+
+.add-btn {
+    content: url('../img/add_sm.svg');
+    width: 48px;
+}
+
+#add-btn:hover + p {
+    display: inline-block;
+}
+
+.cn-btn {
+    width: 48px;
+}
+
+#btn-p {
+}
+
+.triangle-right {
+    z-index: 2;
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    margin-left: 0px;
+    color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.th-a{
+    text-decoration: none;
+    color: black;
+}
+
+.th-a:hover{
+    cursor: pointer;
+}
